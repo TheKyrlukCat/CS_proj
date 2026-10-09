@@ -20,10 +20,14 @@ class Planet:
         self.mass = mass
         self.dx = 0
         self.dy = 0
+        pygame.sprite.Sprite.__init__(self)
+        self.tex = pygame.image.load("kenney_planets/Planets/planet00.png").convert_alpha()
 
     def pull(self, pulled):
+        pass
+        '''
         for obj in pulled:
             angle = atan2(pulled.y - self.y, pulled.x - self.x)
             pull = gravconst * self.mass * pulled.mass / sqrt((self.x - pulled.x) ** 2 + (self.y - pulled.y) ** 2)
             pulled.dx = cos(angle)*pull
-            pulled.dy = sin(angle)*pull
+            pulled.dy = sin(angle)*pull'''
